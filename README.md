@@ -4,8 +4,8 @@
   </a>
 
   <h1>QuantDinger</h1>
-  <h3>AI-Native Quant Research, Strategy, and Trading Platform</h3>
-  <p><strong>From idea to research, backtest, execution, and operations on your own infrastructure.</strong></p>
+  <h3>Self-Hosted AI-Native Quant Research, Strategy, Backtesting, and Trading Platform</h3>
+  <p><strong>Build, test, and run trading workflows with AI analysis, Python strategies, live execution, and operations on your own infrastructure.</strong></p>
 
   <p>
     <a href="README.md"><strong>English</strong></a> &nbsp;·&nbsp;
@@ -27,93 +27,130 @@
 
 ---
 
-## Overview
+## What Is QuantDinger?
 
-QuantDinger is a self-hosted quantitative trading workspace that brings together AI-assisted market analysis, Python strategy development, backtesting, live execution, portfolio operations, and billing-ready user management in one deployable stack.
+QuantDinger is a **self-hosted AI trading platform** and **quant research workspace** for teams and operators who want one system for:
 
-The current `v3.0.1` release aligns frontend/runtime versioning, refreshes the public documentation, and refines UI consistency on top of the recent strategy backtesting upgrades already documented in `docs/CHANGELOG.md`.
+- AI market analysis
+- Python indicator and strategy development
+- backtesting and strategy persistence
+- live trading execution
+- portfolio monitoring and alerts
+- multi-user operations, billing, and commercialization
+
+If you are searching for an **open source quant platform**, **AI trading research stack**, **self-hosted backtesting system**, or **natural-language-to-Python strategy workflow**, this is what QuantDinger is built for.
 
 ## Why QuantDinger
 
-- **Self-hosted by design**: you control deployment, credentials, strategy code, and operational data.
-- **Research to execution in one product**: market data, AI analysis, indicator/strategy authoring, backtests, and live trading are connected.
-- **Python-native workflow**: generate strategies with AI or write them directly with the Python ecosystem you already know.
-- **Operator-ready architecture**: Docker Compose, PostgreSQL, Redis, Nginx, health checks, and environment-driven configuration.
-- **Commercialization support**: built-in membership plans, credits, USDT payment flows, and admin controls.
+- **Self-hosted by design**: your credentials, strategy code, market workflows, and operational data stay under your control.
+- **Research to execution in one product**: AI analysis, charting, strategy logic, backtests, quick trade, and live operations are connected.
+- **Python-native and AI-assisted**: write indicators and strategies directly in Python, or use AI to accelerate drafting and iteration.
+- **Built for operators, not just demos**: Docker Compose, PostgreSQL, Redis, Nginx, health checks, worker toggles, and environment-based configuration.
+- **Commercialization-ready**: memberships, credits, admin management, and USDT payment flows are already part of the stack.
 
-## v3.0.1 Highlights
+## Who It Is For
 
-- Frontend versioning, footer display, and release documentation are aligned to `3.0.1`.
-- Repository-level README content is rewritten to better match the actual deployment model and product scope.
-- Exchange signup/referral links are now documented consistently with the in-app "Open account" entry.
-- Backtest Center UI polish continues the recent strategy-backtest productization work introduced in earlier `2.2.x` releases.
+- **Traders and quants** who want AI-assisted market research without giving up control of infrastructure and data.
+- **Python strategy developers** who want charting, backtests, and live execution in one environment.
+- **Small teams and studios** building internal trading tools or private research platforms.
+- **Operators and founders** who need a deployable product with user management, billing, and admin controls.
 
-## Open Source Repositories
+## What You Can Do With QuantDinger
 
-To make the project easier to navigate, the current public repositories are:
+### AI Research and Decision Support
 
-| Repository | Purpose |
-|------------|---------|
-| [QuantDinger](https://github.com/brokermr810/QuantDinger) | Main repository: backend, deployment stack, docs, prebuilt frontend delivery |
-| [QuantDinger Frontend](https://github.com/brokermr810/QuantDinger-Vue) | Vue.js frontend source repository for UI development and customization |
+- Run fast AI-driven market analysis across price action, kline structure, macro/news context, and selected external inputs.
+- Store analysis history and memory for repeatable review and future calibration.
+- Configure multiple LLM providers such as OpenRouter, OpenAI, Gemini, DeepSeek, and more.
+- Optionally enable ensemble and calibration-style flows for more robust AI outputs.
 
-## Product Capabilities
+### Indicator and Strategy Development
 
-### 1. AI Research and Decision Support
+- Build `IndicatorStrategy` workflows for dataframe-based signals, chart overlays, and signal backtests.
+- Build `ScriptStrategy` workflows for stateful runtime logic, explicit order control, and live execution alignment.
+- Generate indicator or strategy code from natural language and refine it in Python.
+- Visualize indicators, buy/sell signals, and strategy output directly on professional chart interfaces.
 
-- Fast AI analysis pipeline for market interpretation, structured outputs, and historical review.
-- Multi-source research inputs: price action, kline data, macro context, news, and fundamentals where applicable.
-- Optional memory, similarity retrieval, and calibration flows for more stable decision support.
-- Multi-provider LLM support, including OpenRouter, OpenAI, Gemini, DeepSeek, and others configurable by environment variables.
+### Backtesting and Iteration
 
-### 2. Indicator and Strategy Workbench
+- Run historical backtests with stored trades, metrics, and equity curves.
+- Backtest both indicator-driven logic and saved strategy records.
+- Persist strategy snapshots and review historical runs for reproducibility.
+- Use AI-assisted post-backtest analysis to improve parameters and execution assumptions.
 
-- Natural-language assisted strategy drafting for traders who want to move from idea to executable logic faster.
-- Python-native indicator and strategy authoring for teams that need control and extensibility.
-- Integrated charting workflow for signal visualization on professional K-line interfaces.
-- Community publishing and monetization paths for indicator assets.
+### Live Trading and Operations
 
-### 3. Backtesting and Strategy Persistence
+- Connect crypto exchanges through a unified execution layer.
+- Use quick-trade flows to go from analysis to action faster.
+- Monitor open positions, review trade history, and close positions from the platform.
+- Run automated or semi-automated strategy workflows with runtime services and workers.
 
-- Historical backtests with stored runs, metrics, trades, and equity curves.
-- Support for both indicator-driven and saved strategy-driven backtesting flows.
-- Strategy snapshots, configuration persistence, and history review for reproducibility.
-- Foundation for AI-assisted post-backtest analysis and iterative refinement.
+### Multi-Market Coverage
 
-### 4. Live Trading and Execution
+- Crypto spot and derivatives
+- US stocks through IBKR
+- Forex through MT5
+- Prediction market research through Polymarket analysis workflows
 
-- Direct crypto exchange execution with a unified live trading layer.
-- Quick trade workflows for faster manual confirmation and order placement from analysis contexts.
-- Support for position lookup, tracked trade history, and close-position workflows.
-- Strategy runtime and execution services for automated or semi-automated trading operations.
+### Multi-User, Alerts, and Billing
 
-### 5. Multi-Market Coverage
+- PostgreSQL-backed multi-user system with role-based access patterns.
+- OAuth support for Google and GitHub.
+- Notification channels including Telegram, Email, SMS, Discord, and Webhooks.
+- Membership plans, credits, USDT TRC20 payments, and admin-side billing controls.
 
-- Crypto spot and derivatives through multiple exchange integrations.
-- US stock connectivity through IBKR and supporting data providers.
-- Forex connectivity through MT5 and related infrastructure.
-- Prediction-market research for Polymarket analysis workflows.
+## AI Capabilities
 
-### 6. Portfolio, Alerts, and Operations
+QuantDinger is not just "LLM chat added to a trading app". The current AI layer is integrated into the actual research and strategy workflow.
 
-- Portfolio views and monitoring capabilities for account-level oversight.
-- Notification hooks for channels such as Telegram, Email, SMS, Discord, and Webhook workflows.
-- Admin-oriented settings and service toggles exposed through the application.
-- Optional workers for portfolio monitoring, pending orders, and reflection/calibration jobs.
+### Fast Analysis
 
-### 7. Security and Multi-User Management
+- Structured AI market analysis for quick decision support
+- Lower-latency workflow than older multi-hop orchestration
+- Useful for daily market review, trade planning, and opportunity screening
 
-- Multi-user accounts backed by PostgreSQL.
-- Role-based access patterns for admin, manager, user, and viewer-style operations.
-- OAuth integration support for Google and GitHub.
-- Rate limiting, verification, and challenge-response protection options such as Turnstile.
+### AI Strategy and Indicator Generation
 
-### 8. Billing and Monetization
+- Natural language to Python indicator code
+- Natural language to strategy code and config scaffolding
+- Better fit for traders who know the idea they want, but want to accelerate implementation
 
-- Membership plans with configurable pricing and credit allotments.
-- Credit-based usage charging for AI features.
-- USDT TRC20 on-chain payment flow with reconciliation support.
-- Admin-side order, user, and billing management for commercial deployments.
+### Analysis Memory and Review
+
+- Historical analysis storage
+- Better repeatability and comparison over time
+- A foundation for future calibration and reflection loops
+
+### Ensemble, Calibration, and Reflection
+
+- Optional multi-model ensemble configuration
+- Confidence calibration and reflection-style worker support
+- Better operational path for teams that want more stable AI-assisted workflows
+
+### AI-Assisted Backtest Feedback
+
+- Backtest outputs can feed into AI-generated suggestions
+- Useful for parameter tuning, risk adjustments, and faster iteration
+
+### Polymarket and Cross-Market Research
+
+- Analyze prediction markets as a research workflow
+- Compare AI view versus market-implied probabilities
+- Surface divergence and opportunity scoring
+
+## Why It Is Different
+
+Most trading stacks give you one or two of these pieces. QuantDinger aims to give you the full operating system:
+
+1. **Self-hosted infrastructure**
+2. **AI research workflows**
+3. **Python strategy development**
+4. **Backtesting**
+5. **Live execution**
+6. **Portfolio and notification operations**
+7. **Commercialization primitives**
+
+That combination is the core difference.
 
 ## Visual Tour
 
@@ -133,94 +170,17 @@ To make the project easier to navigate, the current public repositories are:
   </tr>
 </table>
 
-## Quick Start
+## How It Works
 
-> Requirement: install [Docker](https://docs.docker.com/get-docker/). Node.js is not required for deployment because this repository already includes the prebuilt frontend in `frontend/dist`.
+At a practical level, QuantDinger runs as a self-hosted application stack:
 
-```bash
-git clone https://github.com/brokermr810/QuantDinger.git
-cd QuantDinger
-cp backend_api_python/env.example backend_api_python/.env
-./scripts/generate-secret-key.sh
-docker-compose up -d --build
-```
+- a prebuilt Vue frontend served by Nginx
+- a Flask API backend with Python services
+- PostgreSQL for state, users, strategies, and history
+- Redis for worker support and runtime coordination
+- exchange, broker, AI, payment, and notification integrations through configurable adapters
 
-Windows PowerShell:
-
-```powershell
-git clone https://github.com/brokermr810/QuantDinger.git
-cd QuantDinger
-Copy-Item backend_api_python\env.example -Destination backend_api_python\.env
-$key = py -c "import secrets; print(secrets.token_hex(32))"
-(Get-Content backend_api_python\.env) -replace '^SECRET_KEY=.*$', "SECRET_KEY=$key" | Set-Content backend_api_python\.env -Encoding UTF8
-docker-compose up -d --build
-```
-
-After startup:
-
-- Frontend: `http://localhost:8888`
-- Backend health check: `http://localhost:5000/api/health`
-- Default login: `quantdinger` / `123456`
-
-Important deployment notes:
-
-- The backend container will **not start** if `SECRET_KEY` still uses the default value.
-- The main application config lives in `backend_api_python/.env`.
-- Root `.env` is optional and is mainly used for image mirrors or custom ports.
-- Default Docker stack includes `frontend` + `backend` + `postgres` + `redis`.
-
-### Common Docker Commands
-
-```bash
-docker-compose ps
-docker-compose logs -f backend
-docker-compose restart backend
-docker-compose up -d --build
-docker-compose down
-```
-
-### Optional Root `.env`
-
-If you need custom ports or image mirrors, create a root `.env`:
-
-```ini
-FRONTEND_PORT=3000
-BACKEND_PORT=127.0.0.1:5001
-IMAGE_PREFIX=docker.m.daocloud.io/library/
-```
-
-## Supported Exchanges and Brokers
-
-### Crypto Exchanges
-
-| Venue | Coverage |
-|-------|----------|
-| Binance | Spot, Futures, Margin |
-| OKX | Spot, Perpetual, Options |
-| Bitget | Spot, Futures, Copy Trading |
-| Bybit | Spot, Linear Futures |
-| Coinbase | Spot |
-| Kraken | Spot, Futures |
-| KuCoin | Spot, Futures |
-| Gate.io | Spot, Futures |
-| Deepcoin | Derivatives integration |
-| HTX | Spot, USDT-margined perpetuals |
-
-### Traditional Markets
-
-| Market | Broker / Source | Execution |
-|--------|------------------|-----------|
-| US Stocks | IBKR, Yahoo Finance, Finnhub | Via IBKR |
-| Forex | MT5, OANDA | Via MT5 |
-| Futures | Exchange/data integrations | Data and workflow support |
-
-### Prediction Markets
-
-Polymarket is supported as an **analysis workflow**, including market lookup, divergence analysis, opportunity scoring, history, and billing integration. It should be described as research support rather than direct live execution.
-
-## Architecture
-
-### Stack Summary
+### Architecture Summary
 
 | Layer | Technology |
 |-------|-----------|
@@ -233,7 +193,15 @@ Polymarket is supported as an **analysis workflow**, including market lookup, di
 | Billing | Membership, credits, USDT TRC20 payment flow |
 | Deployment | Docker Compose with health checks |
 
-### System Architecture Diagram
+### Execution Model
+
+- Market data is pulled through a pluggable data layer.
+- Backtests run on the server-side strategy engine, including strategy snapshot handling.
+- Live strategies run through runtime services that generate order intent.
+- Pending orders are then dispatched through exchange-specific execution adapters.
+- Crypto live execution is intentionally separated from market-data collection concerns.
+
+### System Diagram
 
 ```mermaid
 flowchart LR
@@ -247,15 +215,15 @@ flowchart LR
     subgraph BE[Application Layer]
         API[Flask API Gateway]
         AI[AI Analysis Services]
-        STRAT[Strategy / Backtest Engine]
+        STRAT[Strategy and Backtest Engine]
         EXEC[Execution and Quick Trade]
-        BILL[Billing / Membership / Orders]
+        BILL[Billing and Membership]
     end
 
-    subgraph DATA[State and Data Layer]
+    subgraph DATA[State Layer]
         PG[(PostgreSQL 16)]
         REDIS[(Redis 7)]
-        FILES[Logs / Runtime Data]
+        FILES[Logs and Runtime Data]
     end
 
     subgraph EXT[External Integrations]
@@ -289,27 +257,117 @@ flowchart LR
     API --> NOTIFY
 ```
 
-This is the practical system boundary of QuantDinger: a self-hosted application core, backed by PostgreSQL and Redis, connected outward to model providers, exchanges, brokers, market-data services, and payment/notification infrastructure.
+## Quick Start
 
-```text
-┌──────────────────────────────────────────────┐
-│                Docker Compose                │
-│                                              │
-│  frontend (Nginx)     -> :8888               │
-│          │                                   │
-│          └── /api/* proxy ───────────────┐   │
-│                                           │   │
-│  backend (Flask API) -> :5000            │   │
-│          │                                │   │
-│          ├── PostgreSQL 16               │   │
-│          ├── Redis 7                     │   │
-│          └── External APIs               │   │
-│              LLMs, exchanges, brokers,   │   │
-│              data providers, TronGrid    │   │
-└──────────────────────────────────────────────┘
+> Requirement: install [Docker](https://docs.docker.com/get-docker/). Node.js is not required for deployment because this repository already includes the prebuilt frontend in `frontend/dist`.
+
+### Linux / macOS
+
+```bash
+git clone https://github.com/brokermr810/QuantDinger.git
+cd QuantDinger
+cp backend_api_python/env.example backend_api_python/.env
+./scripts/generate-secret-key.sh
+docker-compose up -d --build
 ```
 
-### Repository Layout
+### Windows PowerShell
+
+```powershell
+git clone https://github.com/brokermr810/QuantDinger.git
+cd QuantDinger
+Copy-Item backend_api_python\env.example -Destination backend_api_python\.env
+$key = py -c "import secrets; print(secrets.token_hex(32))"
+(Get-Content backend_api_python\.env) -replace '^SECRET_KEY=.*$', "SECRET_KEY=$key" | Set-Content backend_api_python\.env -Encoding UTF8
+docker-compose up -d --build
+```
+
+After startup:
+
+- Frontend: `http://localhost:8888`
+- Backend health check: `http://localhost:5000/api/health`
+- Default login: `quantdinger` / `123456`
+
+Important deployment notes:
+
+- The backend container will **not start** if `SECRET_KEY` still uses the default value.
+- The main application config lives in `backend_api_python/.env`.
+- Root `.env` is optional and is mainly used for image mirrors or custom ports.
+- The default stack includes `frontend`, `backend`, `postgres`, and `redis`.
+
+### Common Docker Commands
+
+```bash
+docker-compose ps
+docker-compose logs -f backend
+docker-compose restart backend
+docker-compose up -d --build
+docker-compose down
+```
+
+### Optional Root `.env`
+
+If you need custom ports or image mirrors, create a root `.env`:
+
+```ini
+FRONTEND_PORT=3000
+BACKEND_PORT=127.0.0.1:5001
+IMAGE_PREFIX=docker.m.daocloud.io/library/
+```
+
+## Supported Markets, Brokers, and Exchanges
+
+### Crypto Exchanges
+
+| Venue | Coverage |
+|-------|----------|
+| Binance | Spot, Futures, Margin |
+| OKX | Spot, Perpetual, Options |
+| Bitget | Spot, Futures, Copy Trading |
+| Bybit | Spot, Linear Futures |
+| Coinbase | Spot |
+| Kraken | Spot, Futures |
+| KuCoin | Spot, Futures |
+| Gate.io | Spot, Futures |
+| Deepcoin | Derivatives integration |
+| HTX | Spot, USDT-margined perpetuals |
+
+### Traditional Markets
+
+| Market | Broker / Source | Execution |
+|--------|------------------|-----------|
+| US Stocks | IBKR, Yahoo Finance, Finnhub | Via IBKR |
+| Forex | MT5, OANDA | Via MT5 |
+| Futures | Exchange and data integrations | Data and workflow support |
+
+### Prediction Markets
+
+Polymarket is currently supported as a **research and analysis workflow**, not as direct in-platform live execution. It is useful for market lookup, divergence analysis, opportunity scoring, and AI-assisted review.
+
+## Strategy Development Modes
+
+QuantDinger supports two main strategy authoring models:
+
+### IndicatorStrategy
+
+- dataframe-based Python scripts
+- `buy` / `sell` signal generation
+- chart rendering and signal-style backtests
+- best for research, indicator logic, and visual strategy prototyping
+
+### ScriptStrategy
+
+- event-driven `on_init(ctx)` / `on_bar(ctx, bar)` scripts
+- explicit runtime control with `ctx.buy()`, `ctx.sell()`, `ctx.close_position()`
+- best for stateful strategies, execution-oriented logic, and live alignment
+
+For the full developer workflow, see:
+
+- [Strategy Development Guide](docs/STRATEGY_DEV_GUIDE.md)
+- [Cross-Sectional Strategy Guide](docs/CROSS_SECTIONAL_STRATEGY_GUIDE_EN.md)
+- [Strategy Examples](docs/examples/)
+
+## Repository Layout
 
 ```text
 QuantDinger/
@@ -323,13 +381,13 @@ QuantDinger/
 │   ├── dist/
 │   ├── Dockerfile
 │   └── nginx.conf
-├── docs/                    # Product and deployment documentation
+├── docs/                    # Product, strategy, and deployment documentation
 ├── docker-compose.yml
 ├── LICENSE
 └── TRADEMARKS.md
 ```
 
-### Configuration Areas
+## Configuration Areas
 
 Use `backend_api_python/env.example` as the primary template. Key areas include:
 
@@ -347,28 +405,14 @@ Use `backend_api_python/env.example` as the primary template. Key areas include:
 | Workers | `ENABLE_PENDING_ORDER_WORKER`, `ENABLE_PORTFOLIO_MONITOR`, `ENABLE_REFLECTION_WORKER` |
 | AI tuning | `ENABLE_AI_ENSEMBLE`, `ENABLE_CONFIDENCE_CALIBRATION`, `AI_ENSEMBLE_MODELS` |
 
-## QuantDinger Exchange Signup Links
-
-The following are QuantDinger partner signup links. They may qualify users for trading-fee rebates depending on each venue's rules and campaigns.
-
-| Exchange | Signup Link |
-|----------|-------------|
-| Binance | [Register](https://www.bsmkweb.cc/register?ref=QUANTDINGER) |
-| Bitget | [Register](https://partner.hdmune.cn/bg/7r4xz8kd) |
-| Bybit | [Register](https://partner.bybit.com/b/DINGER) |
-| OKX | [Register](https://www.xqmnobxky.com/join/QUANTDINGER) |
-| Gate.io | [Register](https://www.gateport.company/share/DINGER) |
-| HTX | [Register](https://www.htx.com/invite/zh-cn/1f?invite_code=dinger) |
-
-The same links are also available inside the web application under **Profile -> Open account**.
-
-## Documentation Index
+## Documentation
 
 ### Core Guides
 
 | Document | Description |
 |----------|-------------|
 | [Changelog](docs/CHANGELOG.md) | Version history and migration notes |
+| [Chinese Overview](docs/README_CN.md) | Chinese product overview |
 | [Multi-User Setup](docs/multi-user-setup.md) | PostgreSQL multi-user deployment |
 | [Cloud Deployment](docs/CLOUD_DEPLOYMENT_EN.md) | Domain, HTTPS, reverse proxy, and cloud rollout |
 
@@ -385,23 +429,43 @@ The same links are also available inside the web application under **Profile -> 
 | Topic | English | Chinese |
 |-------|---------|---------|
 | IBKR | [Guide](docs/IBKR_TRADING_GUIDE_EN.md) | - |
-| MT5 | [Guide](docs/MT5_TRADING_GUIDE_EN.md) | [指南](docs/MT5_TRADING_GUIDE_CN.md) |
-| OAuth | [Guide](docs/OAUTH_CONFIG_EN.md) | [指南](docs/OAUTH_CONFIG_CN.md) |
+| MT5 | [Guide](docs/MT5_TRADING_GUIDE_EN.md) | [Guide](docs/MT5_TRADING_GUIDE_CN.md) |
+| OAuth | [Guide](docs/OAUTH_CONFIG_EN.md) | [Guide](docs/OAUTH_CONFIG_CN.md) |
 
 ### Notifications
 
 | Channel | English | Chinese |
 |---------|---------|---------|
-| Telegram | [Setup](docs/NOTIFICATION_TELEGRAM_CONFIG_EN.md) | [配置](docs/NOTIFICATION_TELEGRAM_CONFIG_CH.md) |
-| Email | [Setup](docs/NOTIFICATION_EMAIL_CONFIG_EN.md) | [配置](docs/NOTIFICATION_EMAIL_CONFIG_CH.md) |
-| SMS | [Setup](docs/NOTIFICATION_SMS_CONFIG_EN.md) | [配置](docs/NOTIFICATION_SMS_CONFIG_CH.md) |
+| Telegram | [Setup](docs/NOTIFICATION_TELEGRAM_CONFIG_EN.md) | [Config](docs/NOTIFICATION_TELEGRAM_CONFIG_CH.md) |
+| Email | [Setup](docs/NOTIFICATION_EMAIL_CONFIG_EN.md) | [Config](docs/NOTIFICATION_EMAIL_CONFIG_CH.md) |
+| SMS | [Setup](docs/NOTIFICATION_SMS_CONFIG_EN.md) | [Config](docs/NOTIFICATION_SMS_CONFIG_CH.md) |
+
+## Open Source Repositories
+
+| Repository | Purpose |
+|------------|---------|
+| [QuantDinger](https://github.com/brokermr810/QuantDinger) | Main repository: backend, deployment stack, docs, prebuilt frontend delivery |
+| [QuantDinger Frontend](https://github.com/brokermr810/QuantDinger-Vue) | Vue frontend source repository for UI development and customization |
+
+## Exchange Partner Links
+
+The following links are available in-app under **Profile -> Open account** and may qualify users for trading-fee rebates depending on venue policies.
+
+| Exchange | Signup Link |
+|----------|-------------|
+| Binance | [Register](https://www.bsmkweb.cc/register?ref=QUANTDINGER) |
+| Bitget | [Register](https://partner.hdmune.cn/bg/7r4xz8kd) |
+| Bybit | [Register](https://partner.bybit.com/b/DINGER) |
+| OKX | [Register](https://www.xqmnobxky.com/join/QUANTDINGER) |
+| Gate.io | [Register](https://www.gateport.company/share/DINGER) |
+| HTX | [Register](https://www.htx.com/invite/zh-cn/1f?invite_code=dinger) |
 
 ## License and Commercial Terms
 
 - Backend source code is licensed under **Apache License 2.0**. See `LICENSE`.
 - This repository distributes the frontend UI here as **prebuilt files** for integrated deployment.
 - The frontend source code is available separately at [QuantDinger Frontend](https://github.com/brokermr810/QuantDinger-Vue) under the **QuantDinger Frontend Source-Available License v1.0**.
-- Under that frontend license, Non-Commercial Use and eligible Qualified Non-Profit Entity use are permitted free of charge, while Commercial Use requires a separate commercial license from the copyright holder.
+- Under that frontend license, non-commercial use and eligible qualified non-profit use are permitted free of charge, while commercial use requires a separate commercial license from the copyright holder.
 - Trademark, branding, attribution, and watermark usage are governed separately and may not be removed or altered without permission. See `TRADEMARKS.md`.
 
 For commercial licensing, frontend source access, branding authorization, or deployment support:

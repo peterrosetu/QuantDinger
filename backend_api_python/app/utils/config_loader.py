@@ -88,6 +88,11 @@ def load_addon_config() -> Dict[str, Any]:
         ('GROK_API_KEY', 'grok.api_key', 'string'),
         ('GROK_BASE_URL', 'grok.base_url', 'string'),
         ('GROK_MODEL', 'grok.model', 'string'),
+
+        # Custom OpenAI-compatible endpoint (see LLMProvider.CUSTOM)
+        ('CUSTOM_API_KEY', 'custom.api_key', 'string'),
+        ('CUSTOM_API_URL', 'custom.base_url', 'string'),
+        ('CUSTOM_MODEL', 'custom.model', 'string'),
         
         # LLM Provider Selection
         ('LLM_PROVIDER', 'llm.provider', 'string'),

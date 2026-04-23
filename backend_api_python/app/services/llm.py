@@ -135,7 +135,10 @@ class LLMService:
         # Check for custom base URL in config
         provider_config = config.get(p.value, {})
         custom_url = provider_config.get('base_url') or os.getenv(f'{p.value.upper()}_BASE_URL', '').strip()
-        
+        # PR #56 uses CUSTOM_API_URL (not CUSTOM_BASE_URL); APIKeys mirrors env + addon.
+        if p == LLMProvider.CUSTOM and not custom_url:
+            custom_url = (os.getenv("CUSTOM_API_URL", "").strip() or (APIKeys.CUSTOM_API_URL or "")).strip()
+
         if custom_url:
             return custom_url.rstrip('/')
         
